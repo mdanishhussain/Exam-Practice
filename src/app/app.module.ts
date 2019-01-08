@@ -17,16 +17,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { HTTP } from '@ionic-native/http';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 
 
 const firebaseAuth = {
-  apiKey: "AIzaSyAOkUTefDO5M3D5z077PKYSa4_qzC2hPNU",
-    authDomain: "practice-6330a.firebaseapp.com",
-    databaseURL: "https://practice-6330a.firebaseio.com",
-    projectId: "practice-6330a",
-    storageBucket: "practice-6330a.appspot.com",
-    messagingSenderId: "86689712903"
+  apiKey: "AIzaSyC9TIyHxo4pvM0k4-oipNGo0oMXGPe5vUs",
+    authDomain: "medicine-expiry-reminder.firebaseapp.com",
+    databaseURL: "https://medicine-expiry-reminder.firebaseio.com",
+    projectId: "medicine-expiry-reminder",
+    storageBucket: "medicine-expiry-reminder.appspot.com",
+    messagingSenderId: "1009012750146"
 };
 
 @NgModule({
@@ -57,6 +58,7 @@ const firebaseAuth = {
     SplashScreen,
     Camera,
     HTTP,
+    LocalNotifications,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

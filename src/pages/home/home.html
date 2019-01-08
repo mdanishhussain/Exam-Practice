@@ -3,11 +3,49 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Mediceno</ion-title>
+    <button ion-button right icon-only>
+        <ion-icon name="log-out"></ion-icon>
+      </button>
   </ion-navbar>
+  
 </ion-header>
 
 <ion-content padding>
+    <h1>Add Medicine Reminder</h1>
+    
+    <ion-list>
+  
+        <ion-item>
+          <ion-label floating>Name</ion-label>
+          <ion-input type="text" [(ngModel)] = "med.name" name="name"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label floating>Quantity</ion-label>
+          <ion-input type="number" [(ngModel)] = "med.qty" name="qty"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+            <ion-label>Expiry Date</ion-label>
+            <ion-input type="date" [(ngModel)] = "med.date" name="date"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+            <ion-label>Time</ion-label>
+            <ion-input type="time" [(ngModel)] = "med.time" name="time"></ion-input>
+        </ion-item>
+  
+        <button ion-button block color="dark" (click)="openCamera()">Take Picture</button>
+      
+      </ion-list>
+
+      <button ion-button full color="primary" (click)="addMedicine()">Submit</button>
+      <img src="{{this.med.img}}" />
+  </ion-content>
+
+
+<!-- <ion-content padding>
     <ion-card *ngFor="let msg of chatMessages">
         <ion-card-header>
           {{ msg.email }}
@@ -31,4 +69,4 @@
         </ion-buttons>
       </ion-toolbar>
   
-</ion-footer>
+</ion-footer> -->

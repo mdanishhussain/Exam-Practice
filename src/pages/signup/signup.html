@@ -26,8 +26,17 @@
         <ion-label floating>Password</ion-label>
         <ion-input [(ngModel)]="registerDetails.password" name="password" type="password"></ion-input>
     </ion-item>
+
+    <ion-item>
+        <ion-label floating>Re-Type Password</ion-label>
+        <ion-input [(ngModel)]="registerDetails.repassword" name="repassword" (change)="validatepassword()" type="password"></ion-input>
+        <ion-label *ngIf="registerDetails.repassword != registerDetails.password">Password must be same</ion-label>
+    </ion-item>
+
     <div id="loginbuttons" padding>
         <button ion-button full color="primary" (click)="register()">Register</button>
+        <p>Already Registered?</p>
+        <button ion-button full color="secondary" (click)="goLoginPage()">Login Now</button>
       </div>
     </ion-list>
 </ion-content>

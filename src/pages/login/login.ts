@@ -44,14 +44,17 @@ export class LoginPage {
         this.alert("Welcome");
         this.navCtrl.setRoot(HomePage, this.fire.auth.currentUser.email);
       }
+      else{
+        this.alert("Invalid Email or Password");
+      }
     }
     catch(error){
       this.alert("Invalid Details");
     }
   }
   
-  signup(){
-    this.navCtrl.push(SignupPage);
+  goRegisterPage(){
+    this.navCtrl.pop;
   }
 
   

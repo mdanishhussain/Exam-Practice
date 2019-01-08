@@ -4,6 +4,7 @@ import { SignupPage } from '../signup/signup';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { ListPage } from '../list/list';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { HomePage } from '../home/home';
 
 
 /**
@@ -41,7 +42,7 @@ export class LoginPage {
     try{
       if(this.fire.auth.signInWithEmailAndPassword(this.loginDetails.email, this.loginDetails.password)){
         this.alert("Welcome");
-        this.navCtrl.setRoot(ListPage);
+        this.navCtrl.setRoot(HomePage, this.fire.auth.currentUser.email);
       }
     }
     catch(error){

@@ -15,6 +15,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { HTTP } from '@ionic-native/http';
+
+
 
 const firebaseAuth = {
   apiKey: "AIzaSyAOkUTefDO5M3D5z077PKYSa4_qzC2hPNU",
@@ -51,6 +55,8 @@ const firebaseAuth = {
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
+    HTTP,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

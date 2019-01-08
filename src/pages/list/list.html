@@ -8,5 +8,8 @@
 </ion-header>
 
 <ion-content>
-  hello
+  {{email}}
+  <button ion-button full (click) = "openCamera()">Open Camera</button>
+  <button ion-button full (click) = "gochatPage()">Go to Chat Page</button>
+  <img src="{{clickedImage}}" />
 </ion-content>
